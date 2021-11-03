@@ -1,0 +1,7 @@
+[25-Aug-2020 14:44:51 UTC] PHP Fatal error:  Call to undefined function url() in /home/wwwktown/public_html/resources/_views/includes/emails/booking.blade.php on line 93
+[25-Aug-2020 19:22:43 UTC] PHP Fatal error:  Call to undefined function url() in /home/wwwktown/public_html/resources/_views/includes/emails/booking.blade.php on line 93
+[25-Aug-2020 19:22:43 UTC] PHP Fatal error:  Call to undefined function url() in /home/wwwktown/public_html/resources/_views/includes/emails/booking.blade.php on line 93
+[25-Aug-2020 19:22:44 UTC] PHP Fatal error:  Call to undefined function url() in /home/wwwktown/public_html/resources/_views/includes/emails/booking.blade.php on line 93
+[25-Aug-2020 21:14:53 UTC] PHP Fatal error:  Call to undefined function url() in /home/wwwktown/public_html/resources/_views/includes/emails/booking.blade.php on line 93
+[25-Aug-2020 21:53:58 UTC] PHP Fatal error:  Call to undefined function url() in /home/wwwktown/public_html/resources/_views/includes/emails/booking.blade.php on line 93
+[26-Aug-2020 10:08:23 UTC] PHP Fatal error:  Call to undefined function url() in /home/wwwktown/public_html/resources/_views/includes/emails/booking.blade.php on line 93

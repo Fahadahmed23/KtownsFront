@@ -1,0 +1,16 @@
+[25-Aug-2020 14:44:52 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/wwwktown/public_html/resources/_views/admin/hotel-types/add.blade.php on line 109
+[25-Aug-2020 14:44:52 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/wwwktown/public_html/resources/_views/admin/hotel-types/edit.blade.php on line 111
+[25-Aug-2020 15:10:34 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/wwwktown/public_html/resources/_views/admin/hotel-types/add.blade.php on line 109
+[25-Aug-2020 15:10:34 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/wwwktown/public_html/resources/_views/admin/hotel-types/edit.blade.php on line 111
+[25-Aug-2020 19:26:27 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/wwwktown/public_html/resources/_views/admin/hotel-types/add.blade.php on line 109
+[25-Aug-2020 19:26:27 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/wwwktown/public_html/resources/_views/admin/hotel-types/add.blade.php on line 109
+[25-Aug-2020 19:26:28 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/wwwktown/public_html/resources/_views/admin/hotel-types/add.blade.php on line 109
+[25-Aug-2020 19:26:38 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/wwwktown/public_html/resources/_views/admin/hotel-types/edit.blade.php on line 111
+[25-Aug-2020 19:26:39 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/wwwktown/public_html/resources/_views/admin/hotel-types/edit.blade.php on line 111
+[25-Aug-2020 19:26:40 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/wwwktown/public_html/resources/_views/admin/hotel-types/edit.blade.php on line 111
+[25-Aug-2020 21:15:00 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/wwwktown/public_html/resources/_views/admin/hotel-types/add.blade.php on line 109
+[25-Aug-2020 21:15:00 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/wwwktown/public_html/resources/_views/admin/hotel-types/edit.blade.php on line 111
+[25-Aug-2020 21:53:58 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/wwwktown/public_html/resources/_views/admin/hotel-types/edit.blade.php on line 111
+[25-Aug-2020 21:53:58 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/wwwktown/public_html/resources/_views/admin/hotel-types/add.blade.php on line 109
+[26-Aug-2020 10:06:59 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/wwwktown/public_html/resources/_views/admin/hotel-types/add.blade.php on line 109
+[26-Aug-2020 10:06:59 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/wwwktown/public_html/resources/_views/admin/hotel-types/edit.blade.php on line 111
