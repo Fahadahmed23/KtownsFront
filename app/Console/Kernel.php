@@ -24,8 +24,8 @@ class Kernel extends ConsoleKernel {
      * @return void
      */
     protected function schedule(Schedule $schedule) {
-         //$schedule->command('mytestcommand')->everyMinute();
-         //$schedule->command('blinq:archive')->everyMinute();
+         $schedule->command('mytestcommand')->everyMinute();
+         $schedule->command('blinq:archive')->everyMinute();
 
 //        $schedule->call(function () {
 //            \DB::table('cron_test')->insert(['my_value' => 'asdf']);

@@ -67,7 +67,8 @@ class Home extends WebController {
 
     public function about() {
         return view('about-us', $this->data);
-//        return view('includes/booking/invoice', $this->data);
+
+        //  return view('includes/booking/invoice', $this->data);
     }
     
    public function blog() {
