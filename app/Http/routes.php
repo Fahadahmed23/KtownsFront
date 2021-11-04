@@ -11,7 +11,7 @@
   |
  */
 
-Route::get('/', 'Web\Home@index')->middleware("cors");
+Route::get('/', 'Web\Home@index');
 Route::get('/home', function() {
     return redirect('/');
 });
