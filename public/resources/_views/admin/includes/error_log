@@ -1,0 +1,14 @@
+[25-Aug-2020 14:44:51 UTC] PHP Fatal error:  Class 'Session' not found in /home/wwwktown/public_html/resources/_views/admin/includes/header.blade.php on line 10
+[25-Aug-2020 14:44:51 UTC] PHP Fatal error:  Class 'Request' not found in /home/wwwktown/public_html/resources/_views/admin/includes/sidebar.blade.php on line 2
+[25-Aug-2020 19:24:31 UTC] PHP Fatal error:  Class 'Session' not found in /home/wwwktown/public_html/resources/_views/admin/includes/header.blade.php on line 10
+[25-Aug-2020 19:24:31 UTC] PHP Fatal error:  Class 'Session' not found in /home/wwwktown/public_html/resources/_views/admin/includes/header.blade.php on line 10
+[25-Aug-2020 19:24:33 UTC] PHP Fatal error:  Class 'Session' not found in /home/wwwktown/public_html/resources/_views/admin/includes/header.blade.php on line 10
+[25-Aug-2020 19:24:35 UTC] PHP Fatal error:  Class 'Request' not found in /home/wwwktown/public_html/resources/_views/admin/includes/sidebar.blade.php on line 2
+[25-Aug-2020 19:24:35 UTC] PHP Fatal error:  Class 'Request' not found in /home/wwwktown/public_html/resources/_views/admin/includes/sidebar.blade.php on line 2
+[25-Aug-2020 19:24:36 UTC] PHP Fatal error:  Class 'Request' not found in /home/wwwktown/public_html/resources/_views/admin/includes/sidebar.blade.php on line 2
+[25-Aug-2020 21:14:57 UTC] PHP Fatal error:  Class 'Session' not found in /home/wwwktown/public_html/resources/_views/admin/includes/header.blade.php on line 10
+[25-Aug-2020 21:14:57 UTC] PHP Fatal error:  Class 'Request' not found in /home/wwwktown/public_html/resources/_views/admin/includes/sidebar.blade.php on line 2
+[25-Aug-2020 21:53:57 UTC] PHP Fatal error:  Class 'Session' not found in /home/wwwktown/public_html/resources/_views/admin/includes/header.blade.php on line 10
+[25-Aug-2020 21:53:57 UTC] PHP Fatal error:  Class 'Request' not found in /home/wwwktown/public_html/resources/_views/admin/includes/sidebar.blade.php on line 2
+[26-Aug-2020 10:07:04 UTC] PHP Fatal error:  Class 'Session' not found in /home/wwwktown/public_html/resources/_views/admin/includes/header.blade.php on line 10
+[26-Aug-2020 10:07:04 UTC] PHP Fatal error:  Class 'Request' not found in /home/wwwktown/public_html/resources/_views/admin/includes/sidebar.blade.php on line 2
