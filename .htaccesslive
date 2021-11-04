@@ -1,0 +1,15 @@
+<IfModule mod_rewrite.c>
+    
+    RewriteEngine On
+    RewriteCond %{SERVER_PORT} 80
+    RewriteRule ^(.*)$ http://3.144.197.28:81/$1 [R,L]
+
+    # RewriteEngine on
+    # RewriteCond %{REQUEST_URI} !^resources
+    # RewriteRule ^(.*)$ resources/$1 [L]
+    
+    RewriteEngine on
+    RewriteCond %{REQUEST_URI} !^public
+    RewriteRule ^(.*)$ public/$1 [L]
+    
+</IfModule>
