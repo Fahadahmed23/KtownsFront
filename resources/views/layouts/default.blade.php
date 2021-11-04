@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-  <?php header("Access-Control-Allow-Origin: *"); ?>
     @include('includes/head')
     @include('includes/header')
     <body class="main">
