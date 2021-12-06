@@ -17,23 +17,58 @@
                 <div class="row mt-3">
                     <div class="col-md-6">
                         <div class="ad-box">
-                            <h3> <a href="{{ url('details') }}/ktown-rooms-homes-dha-phase-7" style="color:#fff">KTown Rooms & Homes DHA PHASE 7</a></h3>
-                            <p>Plot # 73-C, Jami Commercial, Street No. 09, Phase VII, DHA، karachi, 75500</p>
+                            <h3> <a href="#" style="color:#fff">KTown Rooms DHA Phase 7</a></h3>
+                            <p>No. 09، Plot # 73-C، Jami Commercial Street 11, D.H.A. Phase 7 Karachi, 75500, Pakistan</p>
         
-                            <h3><a href="{{ url('details') }}/ktown-rooms-and-homes-dha-phase-5" style="color:#fff">KTown Rooms and Homes DHA PHASE 5</a></h3>
-                            <p>Plot 11-C Badar Commercial Street 2, 4th Floor, DHA Phase 5 Karachi, 75500</p>
+                            <h3><a href="#" style="color:#fff">KTown Rooms DHA Phase 5</a></h3>
+                            <p>4th Floor, PLOT 11-C Badar Commercial Street 2, Phase V Badar Commercial Area Defence V Defence Housing Authority, Karachi, Karachi City, Sindh 75500, Pakistan</p>
+                            
+                            <h3><a href="#" style="color:#fff">KTown Homes DHA Phase 5</a></h3>
+                            <p>Plot # 26c, 2nd Floor Saba Commercial Area Defence V Defence Housing Authority, Karachi, Karachi City, Sindh 75500, Pakistan</p>
+
+                            <h3><a href="#" style="color:#fff">KTown Rooms Off Shahrah-e-Faisal</a></h3>
+                            <p>Lal Muhammad Chaudhry Rd, Karachi Memon Co-operative Housing Society Karachi Memon Society PECHS, Karachi, Karachi City, Sindh 75100, Pakistan</p>
+
+                            <h3><a href="#" style="color:#fff">KTown Rooms, Near Airport/Millenium</a></h3>
+                            <p>A8, Gulshan-e-Jamal Block C Faisal Cantonment, Karachi, 75260</p>
+
+                            <h3><a href="#" style="color:#fff">KTown Rooms Hunza Karimabad</a></h3>
+                            <p>Hunza, Karimabad, Gilgit-Baltistan 15700</p>
+
+                            <h3><a href="#" style="color:#fff">KTown Rooms SOST</a></h3>
+                            <p>Afiyatabad, Sost, Gilgit-Baltistan 15800</p>
+
+                            <h3><a href="#" style="color:#fff">Ktown Rooms Near Serena</a></h3>
+                            <p>Public School & College Rd, Jutial, Gilgit, 15100</p>
+
+                            
+                        
+                        
                         </div>
                     </div>
                     <div class="col-md-6">
                         <div class="ad-box">
-                            <h3><a href="{{ url('details') }}/ktown-rooms-and-homes-khalti-lake" style="color:#fff">KTown Rooms and Homes Khalti Lake</a></h3>
-                            <p>Plot # 22F Ghizar Gilgit Road, GUPIS, 15100</p>
+                            <h3><a href="#" style="color:#fff">KTown Rooms Khalti Lake</a></h3>
+                            <p>Plot # 22F Ghizar, Shandur - Gilgit Rd, Gupis, 15100</p>
         
-                            <h3><a href="{{ url('details') }}/ktown-rooms-and-homes-near-marine-drive" style="color:#fff">KTown Rooms and Homes, Near Marine Drive</a></h3>
-                            <p>House no 72, Al Falah Masjid Area, New Town Phase 1, Gwadar, 91200</p>
+                            <h3><a href="#" style="color:#fff">KTown Rooms, Near Marine Drive</a></h3>
+                            <p>House no 72, Al Falah Masjid Area, New Town Phase 1 Gwadar, 91200</p>
                             
-                            <h3><a href="{{ url('details') }}/ktown-rooms-gilgit-jutial" style="color:#fff">KTown Rooms Jutial- Gilgit</a></h3>
-                            <p>Public School Road GILGIT JUTIAL, GILGIT BALTISTAN, 15150</p>
+                            <h3><a href="#" style="color:#fff">KTown Rooms Gilgit Jutial</a></h3>
+                            <p>Mirza Market, Shahr-e-Quaid - e - Azam Near Radio Pakistan Opposite Habib Metro Bank, Jutial, Gilgit, Gilgit-Baltistan 11500</p>
+                            
+                            <h3><a href="#" style="color:#fff">KTown Rooms Islamabad G10</a></h3>
+                            <p>Block no 42, street 36, I & T Centre, 3rd Rd, opp. Mari Petroleum, G-10/4 Islamabad, 44000</p>
+                       
+                            <h3><a href="#" style="color:#fff">KTown Rooms Johar Town Lahore</a></h3>
+                            <p>79, Block R1 Block R 1 Phase 2 Johar Town, Lahore, Punjab, Pakistan</p>
+
+                            <h3><a href="#" style="color:#fff">KTown Rooms Gulberg Lahore</a></h3>
+                            <p>3 canal Park, Canal Rd, near forces academy Gulberg, Gulberg, Lahore, Punjab 54000, Pakistan</p>
+                            
+                            <h3><a href="#" style="color:#fff">KTown Rooms Phander Valley</a></h3>
+                            <p>Gulakhmoli Phandar Valley, Gupis, Ghizer, 15101</p>
+                       
                         </div>
 
                     </div>
