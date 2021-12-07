@@ -31,6 +31,9 @@ class MyBookings extends UserController {
         $data_response_getAllBookings= json_decode($response_getAllBookings);
         $this->data['external_bookings'] = $data_response_getAllBookings;
         
+        //echo "<pre>";
+        //var_dump($this->data['external_bookings']);
+        //die;   
         return view('my-bookings', $this->data);
     }
 
@@ -125,11 +128,81 @@ class MyBookings extends UserController {
         echo json_encode(array("draw" => (int) $_POST["draw"], "recordsTotal" => $recordsTotal, "recordsFiltered" => $recordsFiltered, "data" => $data));
         exit(0);
     }
+    
+    public function viewExternal($id) {
+        
+        $current_user = DB::table('users')->where('UserID', \Session::get("UserID"))->first();
+        if (!empty($current_user)) {
+
+            $current_user_email = $current_user->EmailAddress;
+            if(isset($current_user_email) && !empty($current_user_email)){
+
+                $data = array(
+                    'id' => $id,
+                    'email' => $current_user_email, 
+                );       
+                
+                $data_string = json_encode($data); 
+                //$ch3 = curl_init('https://localhost/ktownrooms.com/public/customer_bookings');
+                $ch3 = curl_init('https://partners.ktownrooms.com/external_customer_bookings');                                                               
+                curl_setopt($ch3, CURLOPT_CUSTOMREQUEST, "POST");                                                                     
+                curl_setopt($ch3, CURLOPT_POSTFIELDS,$data_string);                                                                  
+                curl_setopt($ch3, CURLOPT_RETURNTRANSFER, true);                                                                      
+                curl_setopt($ch3, CURLOPT_HTTPHEADER, array(                                                                          
+                    'Content-Type: application/json',                                                                            
+                    // 'Content-Length: ' . strlen($data_string)
+                    )                                                                       
+                );
+                $result = curl_exec($ch3);
+                $data_response_getSingleBooking= json_decode($result);
+                $this->data['external_bookings'] = $data_response_getSingleBooking;             
+                curl_close($ch3);
+
+                // $this->data['booking_hotels'] =  $data_response_getSingleBooking;
+                $this->data['external_booking'] = $data_response_getSingleBooking;
+                //echo "<pre>";
+                //var_dump($this->data['external_booking']);
+                //echo "</pre>";
+                //die;
+            
+                return view('my-booking-details', $this->data);
+            }
+            else {
+
+                return redirect('my-bookings')->with('warning_msg', "Invalid Booking");
+            }
+        }
+        else {
+
+            return redirect('my-bookings')->with('warning_msg', "Invalid Booking");
+            
+        }
+
+
+        echo "<pre>";
+        var_dump($id);
+        var_dump();
+        echo "</pre>";
+        die;
+
+        if (empty($this->data['booking'])) {
+            return redirect('my-bookings')->with('warning_msg', "Invalid Booking");
+        } else {
+            $query2 = \DB::table('booking_hotels')->select(DB::raw('booking_hotels.*, DATE_FORMAT(CheckInDate, "%d/%m/%Y") as CheckInDate, DATE_FORMAT(CheckOutDate, "%d/%m/%Y") as CheckOutDate'));
+            $query2->where('BookingID', $id);
+
+            $this->data['booking_hotels'] = $query2->get();
+            return view('my-booking-details', $this->data);
+        }
+    }
+
 
     public function view($id) {
         $this->data['booking'] = \DB::table('bookings')
                         ->where('UserID', \Session::get('UserID'))
                         ->where('BookingID', $id)->first();
+
+    
 
         if (empty($this->data['booking'])) {
             return redirect('my-bookings')->with('warning_msg', "Invalid Booking");

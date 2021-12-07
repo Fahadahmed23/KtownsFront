@@ -118,7 +118,8 @@ Route::post('/user-profile', 'Web\Dashboard@update_user_profile');
 
 Route::get('/my-bookings', 'Web\MyBookings@index');
 Route::post('/my-bookings', 'Web\MyBookings@bookings_list');
-Route::get('/my-bookings/{BookingID}', 'Web\MyBookings@view')->where(['BookingID' => '[0-9]+']);
+//Route::get('/my-bookings/{BookingID}', 'Web\MyBookings@view')->where(['BookingID' => '[0-9]+']);
+Route::get('/my-bookings/{BookingID}', 'Web\MyBookings@viewExternal');
 Route::get('/cancel-booking/{BookingID}', 'Web\MyBookings@cancel_booking')->where(['BookingID' => '[0-9]+']);
 Route::get('/logout', 'Web\Dashboard@logout');
 
