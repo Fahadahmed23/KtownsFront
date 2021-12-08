@@ -91,7 +91,7 @@ class Signup extends WebController {
                 'Password' => sha1($Password),
                 'ActivationCode' => $code,
                 'Status' => 1,
-                'IsActivated' => 0,
+                'IsActivated' => 1,
                 "DateAdded" => new \DateTime
             ];
 
