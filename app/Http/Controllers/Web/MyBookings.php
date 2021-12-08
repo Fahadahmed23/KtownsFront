@@ -179,21 +179,6 @@ class MyBookings extends UserController {
         }
 
 
-        echo "<pre>";
-        var_dump($id);
-        var_dump();
-        echo "</pre>";
-        die;
-
-        if (empty($this->data['booking'])) {
-            return redirect('my-bookings')->with('warning_msg', "Invalid Booking");
-        } else {
-            $query2 = \DB::table('booking_hotels')->select(DB::raw('booking_hotels.*, DATE_FORMAT(CheckInDate, "%d/%m/%Y") as CheckInDate, DATE_FORMAT(CheckOutDate, "%d/%m/%Y") as CheckOutDate'));
-            $query2->where('BookingID', $id);
-
-            $this->data['booking_hotels'] = $query2->get();
-            return view('my-booking-details', $this->data);
-        }
     }
 
 
