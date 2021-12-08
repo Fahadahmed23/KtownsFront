@@ -1,5 +1,5 @@
 @extends('layouts.default')
-@section('title', 'About us | Comfortable & stylish budget hotels in Pakistan') 
+@section('title', 'My Bookings | Comfortable & stylish budget hotels in Pakistan') 
 @section('description', 'Ktown Rooms is providing reasonable hospitality services across Pakistan. Our customers avail best services of hotels and guest houses at low prices guaranteed')
 @section('content')
 @include('includes/dashboard-header')
@@ -30,22 +30,43 @@
                     <h3 class=" p-0 fspx-22 fc-dark lh-xlarge"> My Bookings</h3>
                    <!--  <p class="fspx-12">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form</p> -->
                 </div>
-
+                
                 <table class="table mtpx-20 mbpx-20  paginated" >
                     <thead>
                         <tr>
-                            <th scope="col">Booking Total</th>
-                            <th scope="col">Discount</th>
-                            <th scope="col">Promo Discount</th>
-                            <th scope="col">Total Amount</th>
+                            <th scope="col">Booking No</th>
+                            <th scope="col">Guest Name</th>
+                            <th scope="col">Hotel Name</th>
+                            <th scope="col">Booking From</th>
                             <th scope="col">Status</th>
-                            <th scope="col">Booked on</th>
+                            <th scope="col">More Info</th>
                             <th scope="col"></th>
                         </tr>
                     </thead>
                     <tbody>
+                    
+                        @if($external_bookings->totalRecords > 0)
+                            @foreach($external_bookings->bookings as $external_booking)
+                                @if (!empty($external_booking->booking_no)) 
+                                    <tr>
+                                        <td>{{$external_booking->booking_no}}</td>
+                                        <td>{{$external_booking->customer_first_name}}</td>
+                                        <td>{{$external_booking->HotelName}}</td>
+                                        <td>{{date('d-m-Y H:i A', strtotime($external_booking->BookingFrom))}}</td>
+                                        <td>{{$external_booking->status}}</td>
+                                        <td><a href="{{ url('my-bookings/'.$external_booking->id) }}" class="btn btn-view btn-sm" ><i class="fa fa-eye"></i>View</a></td>
+                                    </tr>
+                                @endif
+                        
+                            @endforeach
+                        @endif
+
+                        {{--
+
                         @if(count($bookings)>0)   
                             @foreach($bookings as $booking)
+
+                            
                         <tr>
                             <td>PKR {{number_format($booking->BookingTotal, 0)}}</td>
                             <td>PKR {{number_format($booking->Discount, 0)}}</td>
@@ -67,6 +88,7 @@
                         </tr>
                             @endforeach
                         @endif
+                        --}}
                     </tbody>
                 </table>
                 <div style="float:right;">

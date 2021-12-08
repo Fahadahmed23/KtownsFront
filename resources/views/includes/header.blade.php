@@ -314,7 +314,7 @@ ul.right-ul li a:before{
                                 <li <?php //echo ($segment == "travel-agent" ? 'class="active"' : ''); ?>><a href="{{ url('travel-agent') }}">Travel Agent</a></li>  -->
                             </ul>
 
-                            <ul class="right-ul" style="display:none;">
+                           <!-- <ul class="right-ul" style="">
                                 <li>
                                     <?php
                                     if (\Session::has('CustomerLogin') && \Session::get('CustomerLogin')) {
@@ -360,14 +360,62 @@ ul.right-ul li a:before{
                                     }
                                     ?>
                                 </li>
-                            </ul>
+                            </ul> -->
                         </div>
                     </div>
                     <ul class="ml-auto cntct-nmbr">                                   
-                                        
+                        <li>
+                        
+                            <a href="tel:{{ $configuration->Contact1 }}" class="tel"><i class="fa fa-phone"></i> <span class="phoneNumber">{{ $configuration->Contact1 }}</span></a>
+                        </li>
+                    </ul>
+                    <br>
+                                    <ul class="right-ul" style="">
                                         <li>
-                                        
-                                            <a href="tel:{{ $configuration->Contact1 }}" class="tel"><i class="fa fa-phone"></i> <span class="phoneNumber">{{ $configuration->Contact1 }}</span></a>
+                                            <?php
+                                            if (\Session::has('CustomerLogin') && \Session::get('CustomerLogin')) {
+                                                ?>
+                                                <a href="{{ url('logout') }}" id="access_link">
+                                                    <div class="icon-block">
+                                                        <span class="icon custom-sprite login-icon"></span>
+                                                    </div>
+                                                    <span class="txt">logout</span>
+                                                </a>
+                                            <?php } else {
+                                                ?>
+                                                <a href="{{ url('login') }}" id="access_link">
+                                                    <div class="icon-block">
+                                                        <span class="icon custom-sprite login-icon"></span>
+                                                    </div>
+                                                    <span class="txt">login</span>
+                                                </a>
+                                                <?php
+                                            }
+                                            ?>
+                                        </li>
+                                        <br>
+                                        <li>
+                                            <?php
+                                            if (\Session::has('CustomerLogin') && \Session::get('CustomerLogin')) {
+                                                ?>
+                                                <a href="{{ url('dashboard') }}" id="access_link">
+                                                    <div class="icon-block">
+                                                        <span class="icon custom-sprite register-icon"></span>
+                                                    </div>
+                                                    <span class="txt">Dashb..</span>
+                                                </a>
+                                                <?php
+                                            } else {
+                                                ?>
+                                                <a href="{{ url('signup') }}" id="access_link">
+                                                    <div class="icon-block">
+                                                        <span class="icon custom-sprite register-icon"></span>
+                                                    </div>
+                                                    <span class="txt">Register</span>
+                                                </a>
+                                                <?php
+                                            }
+                                            ?>
                                         </li>
                                     </ul>
             </div>
