@@ -569,7 +569,7 @@ Request for " . $HotelName . ", has been placed with booking id " . $BookingID .
                     $url = "http://pk.eocean.us/APIManagement/API/RequestAPI?user=ktown_rooms&pwd=ANxjeLj%2fFx8uVWXJyKXkiT2M0T3ash8y5r0Q9B%2bSn8qvwYdqmCiM6xFhs2rIV9X3MQ%3d%3d&sender=KTOWN%20ROOMS&reciever=" . $this->formatCellNumber($to) . "&msg-data=" . \urlencode($message) . "&response=json";
                     
                     $url = str_replace('%C2%A0', '+', $url);
-                    
+
                     curl_setopt_array($curl, array(
                     CURLOPT_URL => $url,
                     CURLOPT_RETURNTRANSFER => true,
@@ -580,15 +580,50 @@ Request for " . $HotelName . ", has been placed with booking id " . $BookingID .
                     CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
                     CURLOPT_CUSTOMREQUEST => 'GET',
                     ));
-            
                     $response = curl_exec($curl);
-            
                     curl_close($curl);
                     
-                    
-                    
-                    
+                    // Mr Optimist  09 Dec 2021 
 
+                    
+                    $UserData = [
+                        'UserType' => 1,
+                        'FirstName' => \Input::get('FirstName'),
+                        'LastName' => \Input::get('LastName'),
+                        'Cell' => \Input::get('Cell'),
+                        'EmailAddress' => \Input::get('EmailAddress'),
+                        'Password' => sha1('ktownuser123'),
+                        'Status' => 1,
+                        'IsActivated' => 1,
+                        "DateAdded" => new \DateTime
+                   ];
+
+                   DB::table('users')->insert($UserData);
+
+                   
+                   $message_account = "Ktown has generated your customer portal.You may logged into the account Url : https://www.ktownrooms.com/login, Your email :".\Input::get('EmailAddress')." & password : ktownuser123";
+                   $curl = curl_init();
+                   
+                   $url_account = "http://pk.eocean.us/APIManagement/API/RequestAPI?user=ktown_rooms&pwd=ANxjeLj%2fFx8uVWXJyKXkiT2M0T3ash8y5r0Q9B%2bSn8qvwYdqmCiM6xFhs2rIV9X3MQ%3d%3d&sender=KTOWN%20ROOMS&reciever=" . $this->formatCellNumber($to) . "&msg-data=" . \urlencode($message_account) . "&response=json";
+                   
+                   $url_account = str_replace('%C2%A0', '+', $url_account);
+                   
+                   curl_setopt_array($curl, array(
+                   CURLOPT_URL => $url_account,
+                   CURLOPT_RETURNTRANSFER => true,
+                   CURLOPT_ENCODING => '',
+                   CURLOPT_MAXREDIRS => 10,
+                   CURLOPT_TIMEOUT => 0,
+                   CURLOPT_FOLLOWLOCATION => true,
+                   CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+                   CURLOPT_CUSTOMREQUEST => 'GET',
+                   ));
+           
+                   $response = curl_exec($curl);
+                   curl_close($curl);
+
+                      // Mr Optimist  09 Dec 2021 Ends
+                
                     // $ch = curl_init();
                     // $timeout = 30;
                     // curl_setopt($ch, CURLOPT_URL, $url);
