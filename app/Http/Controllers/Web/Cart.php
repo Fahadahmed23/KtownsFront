@@ -584,9 +584,21 @@ Request for " . $HotelName . ", has been placed with booking id " . $BookingID .
                     curl_close($curl);
                     
                     // Mr Optimist  09 Dec 2021 
+                    $valid_email["EmailAddress"] = 'email|max:50|unique:users';
+                    //$valid_name["EmailAddress"] = "Email Address";
+                    $message_email = [
+                        'EmailAddress.unique' => 'Email Address already registered.',
+                    ];
 
-                    
-                    $UserData = [
+
+                    $validation_email = \Validator::make(\Input::all(), $valid_email, $message_email);
+                    //$v->setAttributeNames($valid_name);
+                    if ($validation_email->fails()) {
+                        $message_account = "Ktown has generated your customer portal.You may logged into the account Url : https://www.ktownrooms.com/login, Your email address :".\Input::get('EmailAddress');
+                    }
+                    else {
+
+                        $UserData = [
                         'UserType' => 1,
                         'FirstName' => \Input::get('FirstName'),
                         'LastName' => \Input::get('LastName'),
@@ -596,14 +608,15 @@ Request for " . $HotelName . ", has been placed with booking id " . $BookingID .
                         'Status' => 1,
                         'IsActivated' => 1,
                         "DateAdded" => new \DateTime
-                   ];
+                        ];
 
-                   DB::table('users')->insert($UserData);
+                        DB::table('users')->insert($UserData);
 
-                   
-                   $message_account = "Ktown has generated your customer portal.You may logged into the account Url : https://www.ktownrooms.com/login, Your email :".\Input::get('EmailAddress')." & password : ktownuser123";
-                   $curl = curl_init();
-                   
+                        $message_account = "Ktown has generated your customer portal.You may logged into the account Url : https://www.ktownrooms.com/login, Your email :".\Input::get('EmailAddress')." & password : ktownuser123";
+
+                    }
+
+                   $curl = curl_init();                   
                    $url_account = "http://pk.eocean.us/APIManagement/API/RequestAPI?user=ktown_rooms&pwd=ANxjeLj%2fFx8uVWXJyKXkiT2M0T3ash8y5r0Q9B%2bSn8qvwYdqmCiM6xFhs2rIV9X3MQ%3d%3d&sender=KTOWN%20ROOMS&reciever=" . $this->formatCellNumber($to) . "&msg-data=" . \urlencode($message_account) . "&response=json";
                    
                    $url_account = str_replace('%C2%A0', '+', $url_account);
