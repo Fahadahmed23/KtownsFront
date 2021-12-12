@@ -11,6 +11,21 @@
   |
  */
 
+
+
+/*
+* Mr Optimist 12 December 2021 - User Creation 
+**/
+
+//Route::post('/inner-user-creation','CustomerVerificationController@inner_user_creation');
+
+/*
+Route::post('/inner-user-creation', function() {
+    return 'fahadahmed zidabad';
+});
+**/
+
+
 Route::get('/', 'Web\Home@index');
 Route::get('/home', function() {
     return redirect('/');

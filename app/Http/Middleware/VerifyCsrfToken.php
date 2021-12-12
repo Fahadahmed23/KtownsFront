@@ -12,7 +12,8 @@ class VerifyCsrfToken extends BaseVerifier {
      * @var array
      */
     protected $except = [
-          'datatables/*', 'order-confirmation/*'
+          'datatables/*', 'order-confirmation/*','inner-user-creation'
     ];
+    
 
 }
