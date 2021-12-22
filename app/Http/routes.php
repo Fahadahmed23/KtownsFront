@@ -17,7 +17,7 @@
 * Mr Optimist 12 December 2021 - User Creation 
 **/
 
-//Route::post('/inner-user-creation','CustomerVerificationController@inner_user_creation');
+Route::post('/inner-user-creation','CustomerVerificationController@inner_user_creation');
 
 /*
 Route::post('/inner-user-creation', function() {
