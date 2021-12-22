@@ -88,9 +88,9 @@
 <div class="row">
 <div class="col-md-12">
 <div class="hotel-locations hidden-sm-down  ">
-		<a href="#">Hotels in Karachi</a></li> |
+		<a href="{{ url('page/hotels-in-karachi') }}">Hotels in Karachi</a></li> |
 		<a href="#">Hotels in Lahore</a></li> |
-		<a href="#">Hotels in Islamabad</a></li> |
+		<a href="{{ url('page/hotels-in-islamabad') }}">Hotels in Islamabad</a></li> |
 		<a href="#">Hotels in Murree</a></li> |
 		<a href="#">Hotels in Swat</a></li> |
 		<a href="{#">Hotels in Naran</a></li> |
