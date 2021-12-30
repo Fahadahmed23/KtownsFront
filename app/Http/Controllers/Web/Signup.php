@@ -181,14 +181,31 @@ class Signup extends WebController {
     }
 
     function vlidate_verification_link($VerifyCode) {
+
+       
         if ($VerifyCode == "") {
             return redirect("login")->withErrors(["errors" => "Invalid verification link"]);
         } else {
+
             $user = DB::table("users")->select("UserID")
-                            ->where("VerificationCode", $VerifyCode)
+                            ->where("VerificationCode",343)
                             ->where("IsVerified", 0)->first();
 
+
+            if($user == null){
+                return redirect("login")->with(["warning_msg" => "Invalid verification link, or your account is already verified."]);
+            }
+            else {
+                DB::table("users")
+                ->where("UserID", $user->UserID)
+                ->update(["VerificationCode" => '', 'IsVerified' => 1 , "ActivationCode" => '', 'IsActivated' => 1 ]);
+                return redirect("login?m=true");
+
+            }
+
+            /*
             if (count($user) == 0) {
+
                 return redirect("login")->with(["warning_msg" => "Invalid verification link, or your account is already verified."]);
             } else {
                 DB::table("users")
@@ -196,6 +213,8 @@ class Signup extends WebController {
                         ->update(["VerificationCode" => '', 'IsVerified' => 1 , "ActivationCode" => '', 'IsActivated' => 1 ]);
                 return redirect("login?m=true");
             }
+            **/
+        
         }
     }
 
