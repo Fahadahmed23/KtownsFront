@@ -93,6 +93,19 @@ ul.right-ul li a:before{
             <li <?php echo ($segment == "about-us" ? 'class="active"' : ''); ?>><a href="{{ url('about-us') }}">About us</a></li>
             <li <?php echo ($segment == "hotels" ? 'class="active"' : ''); ?>><a href="{{ url('hotels') }}">Our Hotels</a></li>
             <li <?php echo ($segment == "partner" ? 'class="active"' : ''); ?>><a href="{{ url('partner') }}">Become Partners</a></li>
+            <?php
+            if (\Session::has('CustomerLogin') && \Session::get('CustomerLogin')) { ?>
+            
+            <li <?php echo ($segment == "dashboard" ? 'class="active"' : ''); ?>><a href="{{ url('dashboard') }}">Dashboard</a></li>
+            <li <?php echo ($segment == "logout" ? 'class="active"' : ''); ?>><a href="{{ url('logout') }}">Logout</a></li>
+
+            <?php }
+            else { ?>
+            <li <?php echo ($segment == "login" ? 'class="active"' : ''); ?>><a href="{{ url('login') }}">Login</a></li>
+            <li <?php echo ($segment == "signup" ? 'class="active"' : ''); ?>><a href="{{ url('signup') }}">Register</a></li>
+
+            <?php  }
+            ?>
             <!--<li <!--?php echo ($segment == "corporate-clients" ? 'class="active"' : ''); ?>><a href="{{ url('corporate-clients') }}">Corporate Partners</a></li>-->
             <!--<li <!--?php echo ($segment == "travel-agent" ? 'class="active"' : ''); ?>><a href="{{ url('travel-agent') }}">Travel Agent</a></li>-->
 
@@ -310,6 +323,19 @@ ul.right-ul li a:before{
                                  <li <?php echo ($segment == "about-us" ? 'class="active"' : ''); ?>><a href="{{ url('about-us') }}">About us</a></li> 
                                 <li <?php echo ($segment == "hotels" ? 'class="active"' : ''); ?>><a href="{{ url('hotels') }}">Our Hotels</a></li>
                                  <li <?php echo ($segment == "partner" ? 'class="active"' : ''); ?>><a href="{{ url('partner') }}">Become Partners</a></li>
+                                 <?php
+                                if (\Session::has('CustomerLogin') && \Session::get('CustomerLogin')) { ?>
+                                
+                                <li <?php echo ($segment == "dashboard" ? 'class="active"' : ''); ?>><a href="{{ url('dashboard') }}">Dashboard</a></li>
+                                <li <?php echo ($segment == "logout" ? 'class="active"' : ''); ?>><a href="{{ url('logout') }}">Logout</a></li>
+
+                                <?php }
+                                else { ?>
+                                <li <?php echo ($segment == "login" ? 'class="active"' : ''); ?>><a href="{{ url('login') }}">Login</a></li>
+                                <li <?php echo ($segment == "signup" ? 'class="active"' : ''); ?>><a href="{{ url('signup') }}">Register</a></li>
+
+                                <?php  }
+                                ?>
                                 <!-- <li <?php //echo ($segment == "corporate-clients" ? 'class="active"' : ''); ?>><a href="{{ url('corporate-clients') }}">Corporate Partners</a></li>
                                 <li <?php //echo ($segment == "travel-agent" ? 'class="active"' : ''); ?>><a href="{{ url('travel-agent') }}">Travel Agent</a></li>  -->
                             </ul>
@@ -370,54 +396,56 @@ ul.right-ul li a:before{
                         </li>
                     </ul>
                     <br>
-                                    <ul class="right-ul" style="">
-                                        <li>
-                                            <?php
-                                            if (\Session::has('CustomerLogin') && \Session::get('CustomerLogin')) {
-                                                ?>
-                                                <a href="{{ url('logout') }}" id="access_link">
-                                                    <div class="icon-block">
-                                                        <span class="icon custom-sprite login-icon"></span>
-                                                    </div>
-                                                    <span class="txt">logout</span>
-                                                </a>
-                                            <?php } else {
-                                                ?>
-                                                <a href="{{ url('login') }}" id="access_link">
-                                                    <div class="icon-block">
-                                                        <span class="icon custom-sprite login-icon"></span>
-                                                    </div>
-                                                    <span class="txt">login</span>
-                                                </a>
-                                                <?php
-                                            }
-                                            ?>
-                                        </li>
-                                        <br>
-                                        <li>
-                                            <?php
-                                            if (\Session::has('CustomerLogin') && \Session::get('CustomerLogin')) {
-                                                ?>
-                                                <a href="{{ url('dashboard') }}" id="access_link">
-                                                    <div class="icon-block">
-                                                        <span class="icon custom-sprite register-icon"></span>
-                                                    </div>
-                                                    <span class="txt">Dashb..</span>
-                                                </a>
-                                                <?php
-                                            } else {
-                                                ?>
-                                                <a href="{{ url('signup') }}" id="access_link">
-                                                    <div class="icon-block">
-                                                        <span class="icon custom-sprite register-icon"></span>
-                                                    </div>
-                                                    <span class="txt">Register</span>
-                                                </a>
-                                                <?php
-                                            }
-                                            ?>
-                                        </li>
-                                    </ul>
+                    <!--
+                    <ul class="right-ul" style="">
+                        <li>
+                            <?php
+                            if (\Session::has('CustomerLogin') && \Session::get('CustomerLogin')) {
+                                ?>
+                                <a href="{{ url('logout') }}" id="access_link">
+                                    <div class="icon-block">
+                                        <span class="icon custom-sprite login-icon"></span>
+                                    </div>
+                                    <span class="txt">logout</span>
+                                </a>
+                            <?php } else {
+                                ?>
+                                <a href="{{ url('login') }}" id="access_link">
+                                    <div class="icon-block">
+                                        <span class="icon custom-sprite login-icon"></span>
+                                    </div>
+                                    <span class="txt">login</span>
+                                </a>
+                                <?php
+                            }
+                            ?>
+                        </li>
+                        <br>
+                        <li>
+                            <?php
+                            if (\Session::has('CustomerLogin') && \Session::get('CustomerLogin')) {
+                                ?>
+                                <a href="{{ url('dashboard') }}" id="access_link">
+                                    <div class="icon-block">
+                                        <span class="icon custom-sprite register-icon"></span>
+                                    </div>
+                                    <span class="txt">Dashb..</span>
+                                </a>
+                                <?php
+                            } else {
+                                ?>
+                                <a href="{{ url('signup') }}" id="access_link">
+                                    <div class="icon-block">
+                                        <span class="icon custom-sprite register-icon"></span>
+                                    </div>
+                                    <span class="txt">Register</span>
+                                </a>
+                                <?php
+                            }
+                            ?>
+                        </li>
+                    </ul>
+                    -->
             </div>
         </div>
     </div>
