@@ -14,7 +14,10 @@ class Pages extends WebController {
     public function index($slug) {
         $this->data['details'] = DB::table('pages')->where('Slug', $slug)->where('Status', 1)->first();
         if (!empty($this->data['details'])) {
-            return view('page', $this->data);
+            
+            //return view('page', $this->data);    
+            return view('pagehotel', $this->data);
+       
         } else {
             return redirect('/');
         }
